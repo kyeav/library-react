@@ -26,7 +26,7 @@ const Nav = ({ numberOfItems }) => {
                         </Link>
                     </li>
                     <li className="nav__list">
-                        <Link to="/books" className="nav__link">
+                        <Link to="/books" className="nav__link nav__link--primary">
                             Books
                         </Link>
                     </li>
@@ -37,9 +37,9 @@ const Nav = ({ numberOfItems }) => {
                         <Link to="/cart" className="nav__link">
                             <FontAwesomeIcon icon="shopping-cart" />
                         </Link>
-                        {
-                            numberOfItems> 0 &&  <span className="cart__length">{numberOfItems}</span>
-                        }
+                        {numberOfItems> 0 &&  (
+                            <span className="cart__length">{numberOfItems}</span>
+                        )}
                     </li>
                 </ul>
 
@@ -49,17 +49,17 @@ const Nav = ({ numberOfItems }) => {
                     </button>
                     <ul className="menu__links">
                         <li className="menu__list">
-                            <Link to="/" className="menu__link">
+                            <Link to="/" className="menu__link" onClick={closeMenu}>
                                 Home
                             </Link>
                         </li>
                         <li className="menu__list">
-                            <Link to="/books" className="menu__link">
+                            <Link to="/books" className="menu__link" onClick={closeMenu}>
                                 Books
                             </Link>
                         </li>
                         <li className="menu__list">
-                            <Link to="/cart" className="menu__link">
+                            <Link to="/cart" className="menu__link" onClick={closeMenu}>
                                 Cart
                             </Link>
                         </li>

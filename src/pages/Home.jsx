@@ -1,20 +1,21 @@
 import React from "react";
 import Landing from "../components/Landing";
 import Highlights from "../components/Highlights";
-import Featured from "../components/Featured";
-import Discounted from "../components/Discounted";
+import Features from "../components/Featured";
+import CheapestBooks from '../components/CheapestBooks'
 import Explore from "../components/Explore";
-import Footer from "../components/Footer";
+
 
 const Home = () => {
     return (
         <>
             <Landing />
-            <Highlights />
-            <Featured />
-            <Discounted />
-            <Explore />
-            <Footer />
+            <main>
+                <Highlights />
+                <Features />
+                <CheapestBooks />
+                <Explore />
+            </main>
         </>
     )
 }

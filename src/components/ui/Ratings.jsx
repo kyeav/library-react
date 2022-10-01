@@ -1,18 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Rating = ({ rating }) => {
+const Ratings = ({ rating }) => {
     return (
         <div className="book__ratings">
             {new Array(Math.floor(rating)).fill(0).map((_, index) => (
                 <FontAwesomeIcon icon="star" key={index} /> 
             ))}
-            {Number.isInteger(rating) ? 
-                '' : <FontAwesomeIcon icon="star-half-alt" />
-            // !Number.isInteger(book.rating) && <FontAwesomeIcon icon="star-half-alt" />
-            }
+            {!Number.isInteger(rating) && <FontAwesomeIcon icon="star-half-alt" />}
+            {/* Number.isInteger(rating) ? '' : <FontAwesomeIcon icon="star-half-alt" /> */}
         </div>
     )
 }
 
-export default Rating
+export default Ratings
